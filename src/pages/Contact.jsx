@@ -217,20 +217,24 @@ const Contact = () => {
                     />
                   </div>
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                      Phone Number *
-                    </label>
-                    <input
-                      type="number"
-                      id="number"
-                      name="number"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200"
-                      placeholder="Enter your Number"
-                    />
-                  </div>
+  <label
+    htmlFor="phone"
+    className="block text-sm font-medium text-gray-700 mb-2"
+  >
+    Phone Number *
+  </label>
+  <input
+    type="tel"
+    id="phone"
+    name="phone"
+    value={formData.phone}
+    onChange={handleChange}
+    required
+    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200"
+    placeholder="Enter your phone number"
+  />
+</div>
+
 
                   <div>
                     <label htmlFor="location" className="block text-sm font-medium text-gray-700 mb-2">
