@@ -1,12 +1,13 @@
 import { Helmet } from 'react-helmet-async';
 import { useState } from 'react';
-import { Phone, Mail, MapPin, MessageCircle, Video, Users } from 'lucide-react';
+import { Phone, Mail, MapPin, MessageCircle, Video } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     course: '',
     email: '',
+    phone: '',   // ✅ fixed
     location: '',
     message: ''
   });
@@ -20,33 +21,47 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Track form submission
-    if (typeof gtag !== 'undefined') {
-      gtag('event', 'form_submit', {
-        event_category: 'Lead Generation',
-        event_label: 'Contact Form'
-      });
-    }
-    if (typeof fbq !== 'undefined') {
-      fbq('track', 'Lead');
-    }
 
-    // Simulate form submission
-    setTimeout(() => {
-      alert('Thank you for your inquiry! We will contact you within 24 hours.');
+    try {
+      await fetch("https://script.google.com/macros/s/AKfycbyZRXcoDvlWvI8UhDh0u8ZY-WzRXed0AnvrWYtMxveVE0nE3zBjNB6L2jIeSx4R-4vqHg/exec", {
+        method: "POST",
+        mode: "no-cors",   // ✅ bypass CORS
+        body: JSON.stringify(formData),
+        headers: { "Content-Type": "application/json" }
+      });
+
+      // Tracking (only if successful)
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'form_submit', {
+          event_category: 'Lead Generation',
+          event_label: 'Contact Form'
+        });
+      }
+      if (typeof fbq !== 'undefined') {
+        fbq('track', 'Lead');
+      }
+
+      alert("✅ Thank you for your inquiry! We will contact you within 24 hours.");
+
+      // ✅ Reset form
       setFormData({
         name: '',
         course: '',
         email: '',
+        phone: '',
         location: '',
         message: ''
       });
+
+    } catch (error) {
+      console.error("Error:", error);
+      alert("❌ There was an error submitting the form.");
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   const handleWhatsAppClick = () => {
@@ -84,29 +99,26 @@ const Contact = () => {
     <>
       <Helmet>
         <title>Contact Students Help Corner - Educational Consultancy & Career Guidance Support</title>
-        <meta name="description" content="Contact Students Help Corner for career guidance, college admission support, BRCC loan assistance, and educational consultancy. Chat, call, or video consultation available." />
-        <meta name="keywords" content="contact educational consultant, career guidance support, college admission help, BRCC loan assistance, educational consultancy contact" />
-        
-        <meta property="og:title" content="Contact Students Help Corner - Educational Consultancy" />
-        <meta property="og:description" content="Get in touch with our expert educational consultants for personalized career guidance and admission support." />
+        <meta
+          name="description"
+          content="Contact Students Help Corner for career guidance, college admission support, BRCC loan assistance, and educational consultancy. Chat, call, or video consultation available."
+        />
       </Helmet>
 
       <div className="min-h-screen">
-        {/* Hero Section */}
+        {/* --- Hero Section --- */}
         <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Get in <span className="text-blue-600">Touch</span>
-              </h1>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Ready to start your educational journey? Contact our expert counselors for personalized guidance and support
-              </p>
-            </div>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Get in <span className="text-blue-600">Touch</span>
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Ready to start your educational journey? Contact our expert counselors for personalized guidance and support
+            </p>
           </div>
         </section>
 
-        {/* Contact Options */}
+        {/* --- Contact Options --- */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
@@ -160,7 +172,7 @@ const Contact = () => {
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              {/* Contact Form */}
+              {/* --- Contact Form --- */}
               <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg">
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -216,25 +228,22 @@ const Contact = () => {
                       placeholder="Enter your email address"
                     />
                   </div>
-                  <div>
-  <label
-    htmlFor="phone"
-    className="block text-sm font-medium text-gray-700 mb-2"
-  >
-    Phone Number *
-  </label>
-  <input
-    type="tel"
-    id="phone"
-    name="phone"
-    value={formData.phone}
-    onChange={handleChange}
-    required
-    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200"
-    placeholder="Enter your phone number"
-  />
-</div>
 
+                  <div>
+                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                      Phone Number *
+                    </label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200"
+                      placeholder="Enter your phone number"
+                    />
+                  </div>
 
                   <div>
                     <label htmlFor="location" className="block text-sm font-medium text-gray-700 mb-2">
@@ -272,7 +281,7 @@ const Contact = () => {
                     disabled={isSubmitting}
                     className="w-full bg-blue-600 text-white py-4 px-6 rounded-lg font-semibold hover:bg-blue-700 disabled:opacity-50 transition-colors duration-200"
                   >
-                    {isSubmitting ? 'Submitting...' : 'Send Message'}
+                    {isSubmitting ? "Submitting..." : "Send Message"}
                   </button>
 
                   <p className="text-sm text-gray-500 text-center">
@@ -281,7 +290,7 @@ const Contact = () => {
                 </form>
               </div>
 
-              {/* Contact Information */}
+              {/* --- Contact Information --- */}
               <div className="space-y-8">
                 <div className="bg-gray-50 p-8 rounded-2xl">
                   <h3 className="text-xl font-bold text-gray-900 mb-6">Contact Information</h3>
@@ -313,24 +322,9 @@ const Contact = () => {
                 <div className="bg-blue-50 p-8 rounded-2xl">
                   <h3 className="text-xl font-bold text-gray-900 mb-6">Social Media</h3>
                   <div className="flex space-x-4">
-                    <a
-                      href="#"
-                      className="bg-blue-600 text-white w-12 h-12 rounded-lg flex items-center justify-center hover:bg-blue-700 transition-colors duration-200"
-                    >
-                      f
-                    </a>
-                    <a
-                      href="#"
-                      className="bg-blue-700 text-white w-12 h-12 rounded-lg flex items-center justify-center hover:bg-blue-800 transition-colors duration-200"
-                    >
-                      in
-                    </a>
-                    <a
-                      href="#"
-                      className="bg-pink-600 text-white w-12 h-12 rounded-lg flex items-center justify-center hover:bg-pink-700 transition-colors duration-200"
-                    >
-                      ig
-                    </a>
+                    <a href="#" className="bg-blue-600 text-white w-12 h-12 rounded-lg flex items-center justify-center hover:bg-blue-700 transition-colors duration-200">f</a>
+                    <a href="#" className="bg-blue-700 text-white w-12 h-12 rounded-lg flex items-center justify-center hover:bg-blue-800 transition-colors duration-200">in</a>
+                    <a href="#" className="bg-pink-600 text-white w-12 h-12 rounded-lg flex items-center justify-center hover:bg-pink-700 transition-colors duration-200">ig</a>
                   </div>
                 </div>
 
@@ -347,31 +341,15 @@ const Contact = () => {
           </div>
         </section>
 
-        {/* Quick Stats */}
+        {/* --- Quick Stats --- */}
         <section className="py-20 bg-blue-600 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Why Students Trust Us
-              </h2>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-              <div>
-                <div className="text-4xl font-bold mb-2">24/7</div>
-                <div className="text-blue-200">Support Available</div>
-              </div>
-              <div>
-                <div className="text-4xl font-bold mb-2">5000+</div>
-                <div className="text-blue-200">Students Helped</div>
-              </div>
-              <div>
-                <div className="text-4xl font-bold mb-2">99%</div>
-                <div className="text-blue-200">Success Rate</div>
-              </div>
-              <div>
-                <div className="text-4xl font-bold mb-2">100+</div>
-                <div className="text-blue-200">College Partners</div>
-              </div>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-12">Why Students Trust Us</h2>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              <div><div className="text-4xl font-bold mb-2">24/7</div><div className="text-blue-200">Support Available</div></div>
+              <div><div className="text-4xl font-bold mb-2">5000+</div><div className="text-blue-200">Students Helped</div></div>
+              <div><div className="text-4xl font-bold mb-2">99%</div><div className="text-blue-200">Success Rate</div></div>
+              <div><div className="text-4xl font-bold mb-2">100+</div><div className="text-blue-200">College Partners</div></div>
             </div>
           </div>
         </section>
