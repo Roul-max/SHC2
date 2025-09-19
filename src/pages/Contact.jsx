@@ -216,6 +216,21 @@ const Contact = () => {
                       placeholder="Enter your email address"
                     />
                   </div>
+                  <div>
+                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                      Phone Number *
+                    </label>
+                    <input
+                      type="number"
+                      id="number"
+                      name="number"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200"
+                      placeholder="Enter your Number"
+                    />
+                  </div>
 
                   <div>
                     <label htmlFor="location" className="block text-sm font-medium text-gray-700 mb-2">
@@ -342,15 +357,15 @@ const Contact = () => {
                 <div className="text-blue-200">Support Available</div>
               </div>
               <div>
-                <div className="text-4xl font-bold mb-2">1000+</div>
+                <div className="text-4xl font-bold mb-2">5000+</div>
                 <div className="text-blue-200">Students Helped</div>
               </div>
               <div>
-                <div className="text-4xl font-bold mb-2">95%</div>
+                <div className="text-4xl font-bold mb-2">99%</div>
                 <div className="text-blue-200">Success Rate</div>
               </div>
               <div>
-                <div className="text-4xl font-bold mb-2">500+</div>
+                <div className="text-4xl font-bold mb-2">100+</div>
                 <div className="text-blue-200">College Partners</div>
               </div>
             </div>

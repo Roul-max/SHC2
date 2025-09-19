@@ -11,7 +11,7 @@ const Header = () => {
     { name: 'About', href: '/about' },
     { name: 'Services', href: '/services' },
     { name: 'Programs', href: '/programs' },
-    { name: 'Top Colleges', href: '/top-colleges' },
+    { name: 'Colleges', href: '/top-colleges' },
     { name: 'FAQ', href: '/faq' },
     { name: 'Contact', href: '/contact' }
   ];
@@ -39,7 +39,7 @@ const Header = () => {
     if (typeof fbq !== 'undefined') {
       fbq('track', 'Contact', { method: 'Phone' });
     }
-    window.location.href = 'tel:+919876543210';
+    window.location.href = 'tel:+919546369339';
   };
 
   return (
@@ -49,7 +49,7 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <GraduationCap className="h-8 w-8 text-blue-600" />
-            <span className="text-xl font-bold text-gray-900">Students Help Corner</span>
+            <span className="text-xl font-bold text-gray-900">Student Help Corner</span>
           </Link>
 
           {/* Desktop Navigation */}

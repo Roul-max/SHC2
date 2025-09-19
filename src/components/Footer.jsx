@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="col-span-1 lg:col-span-2">
             <Link to="/" className="flex items-center space-x-2 mb-4">
               <GraduationCap className="h-8 w-8 text-blue-400" />
-              <span className="text-xl font-bold">Students Help Corner</span>
+              <span className="text-xl font-bold">Student Help Corner</span>
             </Link>
             <p className="text-gray-300 mb-4 max-w-md">
               Providing hassle-free college admissions, BRCC loan guidance for Bihar students, 
@@ -52,7 +52,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-blue-400" />
-                <span className="text-gray-300">studentshelpcorner0@Gmail.com</span>
+                <span className="text-gray-300">studenthelpcorner0@Gmail.com</span>
               </div>
               <div className="flex items-start space-x-2">
                 <MapPin className="h-4 w-4 text-blue-400 mt-1" />
@@ -65,9 +65,6 @@ const Footer = () => {
         <div className="border-t border-gray-800 pt-8 mt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm mb-4 md:mb-0">
-              Copyright ©2025 Students Help Corner. All rights reserved.
-            </p>
-            <p className="text-gray-500 text-xs text-center md:text-right max-w-2xl">
               Your personal information is secure with us.
             </p>
           </div>

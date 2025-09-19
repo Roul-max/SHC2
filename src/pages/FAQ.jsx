@@ -140,7 +140,7 @@ const FAQ = () => {
               </div>
 
               <div className="bg-white p-8 rounded-2xl shadow-lg text-center">
-                <div className="bg-green-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="bg-green-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-8">
                   <span className="text-2xl">💬</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">WhatsApp Support</h3>
@@ -148,7 +148,7 @@ const FAQ = () => {
                   Get instant answers to your questions through our WhatsApp support service.
                 </p>
                 <a
-                  href="https://wa.me/919876543210"
+                  href="https://wa.me/919546369339"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors duration-200 inline-block"
@@ -157,21 +157,7 @@ const FAQ = () => {
                 </a>
               </div>
 
-              <div className="bg-white p-8 rounded-2xl shadow-lg text-center">
-                <div className="bg-orange-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-2xl">📅</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Schedule a Call</h3>
-                <p className="text-gray-600 mb-6">
-                  Book a free consultation call with our expert counselors for detailed guidance.
-                </p>
-                <a
-                  href="tel:+919876543210"
-                  className="bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors duration-200 inline-block"
-                >
-                  Call Now
-                </a>
-              </div>
+             
             </div>
           </div>
         </section>
@@ -189,15 +175,15 @@ const FAQ = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
               <div>
-                <div className="text-4xl font-bold mb-2">1000+</div>
+                <div className="text-4xl font-bold mb-2">5000+</div>
                 <div className="text-blue-200">Students Guided</div>
               </div>
               <div>
-                <div className="text-4xl font-bold mb-2">500+</div>
+                <div className="text-4xl font-bold mb-2">100+</div>
                 <div className="text-blue-200">College Partners</div>
               </div>
               <div>
-                <div className="text-4xl font-bold mb-2">95%</div>
+                <div className="text-4xl font-bold mb-2">99%</div>
                 <div className="text-blue-200">Success Rate</div>
               </div>
               <div>

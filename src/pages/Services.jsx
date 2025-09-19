@@ -212,7 +212,7 @@ const Services = () => {
                 Schedule Consultation
               </a>
               <a
-                href="tel:+919876543210"
+                href="tel:+919546369339"
                 className="inline-flex items-center justify-center px-8 py-4 bg-green-700 text-white text-lg font-semibold rounded-lg hover:bg-green-800 transform hover:scale-105 transition-all duration-200"
               >
                 Call Now

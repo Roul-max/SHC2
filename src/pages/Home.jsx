@@ -56,7 +56,7 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>Students Help Corner | Career & College Admission Guidance in India</title>
+        <title>Student Help Corner | Career & College Admission Guidance in India</title>
         <meta name="description" content="Students Help Corner provides hassle-free college admissions, BRCC loan guidance for Bihar students, low-budget student support, and career counseling across India, especially in NCR." />
         <meta name="keywords" content="college admission guidance, BRCC loan help, Bihar student loans, low-budget admission support, NCR college consultancy, career counseling India" />
         
@@ -65,7 +65,7 @@ const Home = () => {
         <meta property="og:description" content="Students Help Corner provides hassle-free college admissions, BRCC loan guidance for Bihar students, low-budget student support, and career counseling across India, especially in NCR." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://studentshelpcorner.com" />
-        <meta property="og:image" content="https://images.pexels.com/photos/1516440/pexels-photo-1516440.jpeg" />
+        <meta property="og:image" content="https://images.pexels.com/photos/7616700/pexels-photo-7616700.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
         
         {/* FAQ Schema */}
         <script type="application/ld+json">
@@ -134,7 +134,7 @@ const Home = () => {
               </div>
               <div className="relative">
                 <img
-                  src="https://images.pexels.com/photos/1516440/pexels-photo-1516440.jpeg"
+                  src="https://images.pexels.com/photos/7616700/pexels-photo-7616700.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
                   alt="Students studying together with educational guidance and counseling support"
                   className="rounded-2xl shadow-2xl w-full h-96 object-cover"
                 />
@@ -230,15 +230,15 @@ const Home = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
               <div>
-                <div className="text-4xl font-bold mb-2">1000+</div>
+                <div className="text-4xl font-bold mb-2">5000+</div>
                 <div className="text-blue-200">Students Helped</div>
               </div>
               <div>
-                <div className="text-4xl font-bold mb-2">500+</div>
+                <div className="text-4xl font-bold mb-2">100+</div>
                 <div className="text-blue-200">College Partnerships</div>
               </div>
               <div>
-                <div className="text-4xl font-bold mb-2">95%</div>
+                <div className="text-4xl font-bold mb-2">99%</div>
                 <div className="text-blue-200">Success Rate</div>
               </div>
               <div>

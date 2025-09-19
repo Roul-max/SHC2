@@ -12,40 +12,40 @@ const Programs = () => {
       career: ['Software Developer', 'System Analyst', 'Web Developer', 'Database Administrator']
     },
     {
-      name: 'BBA',
-      fullName: 'Bachelor of Business Administration',
-      description: 'Comprehensive business management program covering marketing, finance, HR, and operations with practical industry exposure.',
-      duration: '3 Years',
+      name: 'B.Pharma',
+      fullName: 'Bachelor of Pharmacy',
+      description: 'Pharmaceutical sciences covering drug formulation, pharmacology, and healthcare applications',
+      duration: '4 Years',
       eligibility: '12th Pass',
-      icon: '💼',
-      career: ['Marketing Manager', 'Business Analyst', 'HR Executive', 'Operations Manager']
+      icon: '💉',
+      career: ['Pharmacist', 'Clinical Researcher', 'Quality Analyst', 'Regulatory Affairs Specialist']
     },
     {
-      name: 'MBA',
-      fullName: 'Master of Business Administration',
-      description: 'Advanced management program with specializations in various business domains including case studies and corporate internships.',
+      name: 'D.Pharma',
+      fullName: 'Diploma in Pharmacy',
+      description: 'Pharmacy diploma focusing on practical skills in drug dispensing, pharmacy management, and healthcare support',
       duration: '2 Years',
-      eligibility: 'Graduation + CAT/MAT',
-      icon: '📊',
-      career: ['General Manager', 'Consultant', 'Business Head', 'Entrepreneur']
+      eligibility: '12th Pass',
+      icon: '💊',
+      career: ['Pharmacy Technician', 'Medical Representative', 'Pharmacy Assistant', 'Healthcare Support']
+    },
+    {
+      name: 'BJMC',
+      fullName: 'Bachelor of Journalism and Mass Communication',
+      description: 'Media studies covering journalism, mass communication, digital media, and public relations',
+      duration: '3 Years',
+      eligibility: '12th Pass',
+      icon: '📰',
+      career: ['Journalist', 'Content Writer', 'Public Relations Officer', 'Media Planner']
     },
     {
       name: 'BA',
       fullName: 'Bachelor of Arts',
-      description: 'Liberal arts education covering humanities, social sciences, and languages with diverse career opportunities.',
+      description: 'Undergraduate program in humanities and social sciences with various specializations',
       duration: '3 Years',
       eligibility: '12th Pass',
-      icon: '🎨',
-      career: ['Content Writer', 'Journalist', 'Teacher', 'Civil Services']
-    },
-    {
-      name: 'MA',
-      fullName: 'Master of Arts',
-      description: 'Advanced study in humanities and social sciences with research opportunities and specialized knowledge.',
-      duration: '2 Years',
-      eligibility: 'BA Degree',
       icon: '📚',
-      career: ['Professor', 'Researcher', 'Policy Analyst', 'Museum Curator']
+      career: ['Teacher', 'Writer', 'Social Worker', 'Further Studies']
     },
     {
       name: 'MCA',
@@ -57,22 +57,22 @@ const Programs = () => {
       career: ['Software Engineer', 'IT Consultant', 'Project Manager', 'Systems Architect']
     },
     {
-      name: 'B.Sc',
-      fullName: 'Bachelor of Science',
-      description: 'Scientific education in various streams including physics, chemistry, biology, mathematics, and applied sciences.',
-      duration: '3 Years',
-      eligibility: '12th Pass (PCM/PCB)',
-      icon: '🔬',
-      career: ['Research Scientist', 'Lab Technician', 'Quality Analyst', 'Further Studies']
+      name: 'BA LLB',
+      fullName: 'Bachelor of Arts + Bachelor of Legislative Law',
+      description: 'Integrated law program combining arts and legal studies for a comprehensive understanding of law and society.',
+      duration: '5 Years',
+      eligibility: '12th Pass',
+      icon: '⚖️',
+      career: ['Lawyer', 'Legal Advisor', 'Judge', 'Corporate Counsel']
     },
     {
-      name: 'M.Sc',
-      fullName: 'Master of Science',
-      description: 'Advanced scientific study with research opportunities and specialized knowledge in chosen scientific field.',
+      name: 'MA',
+      fullName: 'Master of Arts',
+      description: 'Postgraduate program in humanities and social sciences with various specializations',
       duration: '2 Years',
-      eligibility: 'B.Sc Degree',
-      icon: '⚗️',
-      career: ['Research Scientist', 'Professor', 'R&D Manager', 'Scientific Consultant']
+      eligibility: 'BA Degree',
+      icon: '🎓',
+      career: ['Researcher', 'Lecturer', 'Content Developer', 'Further Studies']
     },
     {
       name: 'B.Com',
@@ -80,8 +80,26 @@ const Programs = () => {
       description: 'Commerce and business studies covering accounting, finance, taxation, and business law with practical applications.',
       duration: '3 Years',
       eligibility: '12th Pass',
-      icon: '💰',
+      icon: '💼',
       career: ['Accountant', 'Financial Analyst', 'Tax Consultant', 'Banking Professional']
+    },
+    {
+      name: 'B.Com LLB',
+      fullName: 'Bachelor of Commerce + Bachelor of Legislative Law',
+      description: 'Integrated program combining commerce and legal studies for a comprehensive understanding of business and law.',
+      duration: '5 Years',
+      eligibility: '12th Pass',
+      icon: '📜',
+      career: ['Corporate Lawyer', 'Legal Advisor', 'Compliance Officer', 'Business Consultant']
+    },
+    {
+      name: 'Diploma',
+      fullName: 'Diploma Courses',
+      description: 'Short-term diploma programs in various fields such as engineering, management, design, and healthcare.',
+      duration: '1-3 Years',
+      eligibility: '10th/12th Pass',
+      icon: '📜',
+      career: ['Technician', 'Designer', 'Healthcare Assistant', 'Business Support']
     }
   ];
 
